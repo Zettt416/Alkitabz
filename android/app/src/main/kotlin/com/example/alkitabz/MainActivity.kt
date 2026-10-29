@@ -12,22 +12,45 @@ import java.util.Locale
 class MainActivity : FlutterActivity(), TextToSpeech.OnInitListener {
     private val CHANNEL = "com.example.alkitabz/tts"
     private var tts: TextToSpeech? = null
-    private var ttsReady = false
+    @Volatile private var ttsReady = false
     private var channel: MethodChannel? = null
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
-        tts = TextToSpeech(applicationContext, this)
         channel = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL)
+        initTts()
+
         channel?.setMethodCallHandler { call, result ->
             when (call.method) {
+                "init" -> {
+                    if (tts == null || !ttsReady) {
+                        initTts()
+                    }
+                    result.success(true)
+                }
                 "speak" -> {
                     val text = call.argument<String>("text")
-                    val lang = call.argument<String>("lang") ?: "he-IL"
+                    val lang = call.argument<String>("lang") ?: "id-ID"
                     if (text.isNullOrEmpty()) {
                         result.success(false)
                         return@setMethodCallHandler
                     }
+
+                    if (tts == null) {
+                        initTts()
+                    }
+
+                    // Tunggu hingga binding service TTS selesai (maks 1500 ms) jika pengguna menekan tombol sangat cepat
+                    if (!ttsReady) {
+                        var waited = 0
+                        while (!ttsReady && waited < 1500) {
+                            try {
+                                Thread.sleep(100)
+                            } catch (_: InterruptedException) {}
+                            waited += 100
+                        }
+                    }
+
                     if (!ttsReady || tts == null) {
                         result.success(false)
                         return@setMethodCallHandler
@@ -51,29 +74,50 @@ class MainActivity : FlutterActivity(), TextToSpeech.OnInitListener {
                     val isAvailable = langResult >= TextToSpeech.LANG_AVAILABLE
 
                     if (!isAvailable) {
-                        // Language voice data is not installed on this Android device
+                        // Voice pack bahasa belum terpasang di perangkat
                         result.success(false)
                         return@setMethodCallHandler
                     }
 
-                    // Strip cantillation accents that confuse the TTS engine
+                    // Bersihkan tanda vokal kuno / aksen cantillation Niqqud agar engine TTS tidak bingung
                     val cleanText = if (lang.startsWith("he")) {
-                        text.replace("׃", "").replace("־", " ").replace(Regex("[\\u0591-\\u05AF\\u05BD]"), "")
+                        text.replace("׃", "").replace("־", " ").replace(Regex("[\\u0591-\\u05CF]"), "").trim()
                     } else {
                         text
                     }
 
-                    tts?.stop()
-                    val code = tts?.speak(cleanText, TextToSpeech.QUEUE_FLUSH, null, "utterance_alkitab")
-                    result.success(code == TextToSpeech.SUCCESS)
+                    try {
+                        tts?.stop()
+                        val code = tts?.speak(cleanText, TextToSpeech.QUEUE_FLUSH, null, "utterance_alkitab")
+                        result.success(code == TextToSpeech.SUCCESS)
+                    } catch (e: Exception) {
+                        result.success(false)
+                    }
                 }
                 "stop" -> {
-                    tts?.stop()
+                    try {
+                        tts?.stop()
+                    } catch (_: Exception) {}
                     result.success(true)
                 }
                 "isLanguageAvailable" -> {
                     val lang = call.argument<String>("lang") ?: "he-IL"
-                    val isAvailable = if (lang.startsWith("he")) {
+                    if (tts == null) {
+                        initTts()
+                    }
+                    if (!ttsReady) {
+                        var waited = 0
+                        while (!ttsReady && waited < 1000) {
+                            try {
+                                Thread.sleep(100)
+                            } catch (_: InterruptedException) {}
+                            waited += 100
+                        }
+                    }
+
+                    val isAvailable = if (!ttsReady || tts == null) {
+                        false
+                    } else if (lang.startsWith("he")) {
                         val locHe = Locale("he", "IL")
                         val locIw = Locale("iw", "IL")
                         (tts?.isLanguageAvailable(locHe) ?: -2) >= 0 || (tts?.isLanguageAvailable(locIw) ?: -2) >= 0
@@ -103,6 +147,15 @@ class MainActivity : FlutterActivity(), TextToSpeech.OnInitListener {
         }
     }
 
+    private fun initTts() {
+        try {
+            tts?.shutdown()
+        } catch (_: Exception) {}
+        ttsReady = false
+        // Gunakan Activity context (this) agar binding service terikat ke lifecycle Activity
+        tts = TextToSpeech(this, this)
+    }
+
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
             ttsReady = true
@@ -123,12 +176,16 @@ class MainActivity : FlutterActivity(), TextToSpeech.OnInitListener {
                     runOnUiThread { channel?.invokeMethod("onError", utteranceId) }
                 }
             })
+        } else {
+            ttsReady = false
         }
     }
 
     override fun onDestroy() {
-        tts?.stop()
-        tts?.shutdown()
+        try {
+            tts?.stop()
+            tts?.shutdown()
+        } catch (_: Exception) {}
         super.onDestroy()
     }
 }

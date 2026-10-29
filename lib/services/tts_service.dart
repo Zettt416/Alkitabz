@@ -12,6 +12,7 @@ class TtsService {
   static void init() {
     if (_initialized) return;
     _initialized = true;
+    _channel.invokeMethod('init').catchError((_) => null);
     _channel.setMethodCallHandler((call) async {
       switch (call.method) {
         case 'onStart':

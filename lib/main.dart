@@ -341,6 +341,7 @@ class _AlkitabAppState extends State<AlkitabApp> {
   @override
   void initState() {
     super.initState();
+    TtsService.init();
     _loadSettings();
   }
 
