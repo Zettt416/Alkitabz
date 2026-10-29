@@ -1,0 +1,530 @@
+[
+  {
+    "id": 1,
+    "name": "Kejadian",
+    "abbr": "Kej",
+    "testament": "PL",
+    "category": "Taurat",
+    "chaptersCount": 50
+  },
+  {
+    "id": 2,
+    "name": "Keluaran",
+    "abbr": "Kel",
+    "testament": "PL",
+    "category": "Taurat",
+    "chaptersCount": 40
+  },
+  {
+    "id": 3,
+    "name": "Imamat",
+    "abbr": "Im",
+    "testament": "PL",
+    "category": "Taurat",
+    "chaptersCount": 27
+  },
+  {
+    "id": 4,
+    "name": "Bilangan",
+    "abbr": "Bil",
+    "testament": "PL",
+    "category": "Taurat",
+    "chaptersCount": 36
+  },
+  {
+    "id": 5,
+    "name": "Ulangan",
+    "abbr": "Ul",
+    "testament": "PL",
+    "category": "Taurat",
+    "chaptersCount": 34
+  },
+  {
+    "id": 6,
+    "name": "Yosua",
+    "abbr": "Yos",
+    "testament": "PL",
+    "category": "Sejarah",
+    "chaptersCount": 24
+  },
+  {
+    "id": 7,
+    "name": "Hakim-hakim",
+    "abbr": "Hak",
+    "testament": "PL",
+    "category": "Sejarah",
+    "chaptersCount": 21
+  },
+  {
+    "id": 8,
+    "name": "Rut",
+    "abbr": "Rut",
+    "testament": "PL",
+    "category": "Sejarah",
+    "chaptersCount": 4
+  },
+  {
+    "id": 9,
+    "name": "1 Samuel",
+    "abbr": "1Sam",
+    "testament": "PL",
+    "category": "Sejarah",
+    "chaptersCount": 31
+  },
+  {
+    "id": 10,
+    "name": "2 Samuel",
+    "abbr": "2Sam",
+    "testament": "PL",
+    "category": "Sejarah",
+    "chaptersCount": 24
+  },
+  {
+    "id": 11,
+    "name": "1 Raja-raja",
+    "abbr": "1Raj",
+    "testament": "PL",
+    "category": "Sejarah",
+    "chaptersCount": 22
+  },
+  {
+    "id": 12,
+    "name": "2 Raja-raja",
+    "abbr": "2Raj",
+    "testament": "PL",
+    "category": "Sejarah",
+    "chaptersCount": 25
+  },
+  {
+    "id": 13,
+    "name": "1 Tawarikh",
+    "abbr": "1Taw",
+    "testament": "PL",
+    "category": "Sejarah",
+    "chaptersCount": 29
+  },
+  {
+    "id": 14,
+    "name": "2 Tawarikh",
+    "abbr": "2Taw",
+    "testament": "PL",
+    "category": "Sejarah",
+    "chaptersCount": 36
+  },
+  {
+    "id": 15,
+    "name": "Ezra",
+    "abbr": "Ezr",
+    "testament": "PL",
+    "category": "Sejarah",
+    "chaptersCount": 10
+  },
+  {
+    "id": 16,
+    "name": "Nehemia",
+    "abbr": "Neh",
+    "testament": "PL",
+    "category": "Sejarah",
+    "chaptersCount": 13
+  },
+  {
+    "id": 17,
+    "name": "Ester",
+    "abbr": "Est",
+    "testament": "PL",
+    "category": "Sejarah",
+    "chaptersCount": 10
+  },
+  {
+    "id": 18,
+    "name": "Ayub",
+    "abbr": "Ayb",
+    "testament": "PL",
+    "category": "Puisi & Hikmat",
+    "chaptersCount": 42
+  },
+  {
+    "id": 19,
+    "name": "Mazmur",
+    "abbr": "Maz",
+    "testament": "PL",
+    "category": "Puisi & Hikmat",
+    "chaptersCount": 150
+  },
+  {
+    "id": 20,
+    "name": "Amsal",
+    "abbr": "Ams",
+    "testament": "PL",
+    "category": "Puisi & Hikmat",
+    "chaptersCount": 31
+  },
+  {
+    "id": 21,
+    "name": "Pengkhotbah",
+    "abbr": "Pkh",
+    "testament": "PL",
+    "category": "Puisi & Hikmat",
+    "chaptersCount": 12
+  },
+  {
+    "id": 22,
+    "name": "Kidung Agung",
+    "abbr": "Kid",
+    "testament": "PL",
+    "category": "Puisi & Hikmat",
+    "chaptersCount": 8
+  },
+  {
+    "id": 23,
+    "name": "Yesaya",
+    "abbr": "Yes",
+    "testament": "PL",
+    "category": "Nabi-nabi Besar",
+    "chaptersCount": 66
+  },
+  {
+    "id": 24,
+    "name": "Yeremia",
+    "abbr": "Yer",
+    "testament": "PL",
+    "category": "Nabi-nabi Besar",
+    "chaptersCount": 52
+  },
+  {
+    "id": 25,
+    "name": "Ratapan",
+    "abbr": "Rat",
+    "testament": "PL",
+    "category": "Nabi-nabi Besar",
+    "chaptersCount": 5
+  },
+  {
+    "id": 26,
+    "name": "Yehezkiel",
+    "abbr": "Yeh",
+    "testament": "PL",
+    "category": "Nabi-nabi Besar",
+    "chaptersCount": 48
+  },
+  {
+    "id": 27,
+    "name": "Daniel",
+    "abbr": "Dan",
+    "testament": "PL",
+    "category": "Nabi-nabi Besar",
+    "chaptersCount": 12
+  },
+  {
+    "id": 28,
+    "name": "Hosea",
+    "abbr": "Hos",
+    "testament": "PL",
+    "category": "Nabi-nabi Kecil",
+    "chaptersCount": 14
+  },
+  {
+    "id": 29,
+    "name": "Yoel",
+    "abbr": "Yl",
+    "testament": "PL",
+    "category": "Nabi-nabi Kecil",
+    "chaptersCount": 3
+  },
+  {
+    "id": 30,
+    "name": "Amos",
+    "abbr": "Am",
+    "testament": "PL",
+    "category": "Nabi-nabi Kecil",
+    "chaptersCount": 9
+  },
+  {
+    "id": 31,
+    "name": "Obaja",
+    "abbr": "Ob",
+    "testament": "PL",
+    "category": "Nabi-nabi Kecil",
+    "chaptersCount": 1
+  },
+  {
+    "id": 32,
+    "name": "Yunus",
+    "abbr": "Yun",
+    "testament": "PL",
+    "category": "Nabi-nabi Kecil",
+    "chaptersCount": 4
+  },
+  {
+    "id": 33,
+    "name": "Mikha",
+    "abbr": "Mi",
+    "testament": "PL",
+    "category": "Nabi-nabi Kecil",
+    "chaptersCount": 7
+  },
+  {
+    "id": 34,
+    "name": "Nahum",
+    "abbr": "Nah",
+    "testament": "PL",
+    "category": "Nabi-nabi Kecil",
+    "chaptersCount": 3
+  },
+  {
+    "id": 35,
+    "name": "Habakuk",
+    "abbr": "Hab",
+    "testament": "PL",
+    "category": "Nabi-nabi Kecil",
+    "chaptersCount": 3
+  },
+  {
+    "id": 36,
+    "name": "Zefanya",
+    "abbr": "Zef",
+    "testament": "PL",
+    "category": "Nabi-nabi Kecil",
+    "chaptersCount": 3
+  },
+  {
+    "id": 37,
+    "name": "Hagai",
+    "abbr": "Hag",
+    "testament": "PL",
+    "category": "Nabi-nabi Kecil",
+    "chaptersCount": 2
+  },
+  {
+    "id": 38,
+    "name": "Zakharia",
+    "abbr": "Za",
+    "testament": "PL",
+    "category": "Nabi-nabi Kecil",
+    "chaptersCount": 14
+  },
+  {
+    "id": 39,
+    "name": "Maleakhi",
+    "abbr": "Mal",
+    "testament": "PL",
+    "category": "Nabi-nabi Kecil",
+    "chaptersCount": 4
+  },
+  {
+    "id": 40,
+    "name": "Matius",
+    "abbr": "Mat",
+    "testament": "PB",
+    "category": "Injil",
+    "chaptersCount": 28
+  },
+  {
+    "id": 41,
+    "name": "Markus",
+    "abbr": "Mrk",
+    "testament": "PB",
+    "category": "Injil",
+    "chaptersCount": 16
+  },
+  {
+    "id": 42,
+    "name": "Lukas",
+    "abbr": "Luk",
+    "testament": "PB",
+    "category": "Injil",
+    "chaptersCount": 24
+  },
+  {
+    "id": 43,
+    "name": "Yohanes",
+    "abbr": "Yoh",
+    "testament": "PB",
+    "category": "Injil",
+    "chaptersCount": 21
+  },
+  {
+    "id": 44,
+    "name": "Kisah Para Rasul",
+    "abbr": "Kis",
+    "testament": "PB",
+    "category": "Sejarah",
+    "chaptersCount": 28
+  },
+  {
+    "id": 45,
+    "name": "Roma",
+    "abbr": "Rm",
+    "testament": "PB",
+    "category": "Surat Paulus",
+    "chaptersCount": 16
+  },
+  {
+    "id": 46,
+    "name": "1 Korintus",
+    "abbr": "1Kor",
+    "testament": "PB",
+    "category": "Surat Paulus",
+    "chaptersCount": 16
+  },
+  {
+    "id": 47,
+    "name": "2 Korintus",
+    "abbr": "2Kor",
+    "testament": "PB",
+    "category": "Surat Paulus",
+    "chaptersCount": 13
+  },
+  {
+    "id": 48,
+    "name": "Galatia",
+    "abbr": "Gal",
+    "testament": "PB",
+    "category": "Surat Paulus",
+    "chaptersCount": 6
+  },
+  {
+    "id": 49,
+    "name": "Efesus",
+    "abbr": "Ef",
+    "testament": "PB",
+    "category": "Surat Paulus",
+    "chaptersCount": 6
+  },
+  {
+    "id": 50,
+    "name": "Filipi",
+    "abbr": "Flp",
+    "testament": "PB",
+    "category": "Surat Paulus",
+    "chaptersCount": 4
+  },
+  {
+    "id": 51,
+    "name": "Kolose",
+    "abbr": "Kol",
+    "testament": "PB",
+    "category": "Surat Paulus",
+    "chaptersCount": 4
+  },
+  {
+    "id": 52,
+    "name": "1 Tesalonika",
+    "abbr": "1Tes",
+    "testament": "PB",
+    "category": "Surat Paulus",
+    "chaptersCount": 5
+  },
+  {
+    "id": 53,
+    "name": "2 Tesalonika",
+    "abbr": "2Tes",
+    "testament": "PB",
+    "category": "Surat Paulus",
+    "chaptersCount": 3
+  },
+  {
+    "id": 54,
+    "name": "1 Timotius",
+    "abbr": "1Tim",
+    "testament": "PB",
+    "category": "Surat Paulus",
+    "chaptersCount": 6
+  },
+  {
+    "id": 55,
+    "name": "2 Timotius",
+    "abbr": "2Tim",
+    "testament": "PB",
+    "category": "Surat Paulus",
+    "chaptersCount": 4
+  },
+  {
+    "id": 56,
+    "name": "Titus",
+    "abbr": "Tit",
+    "testament": "PB",
+    "category": "Surat Paulus",
+    "chaptersCount": 3
+  },
+  {
+    "id": 57,
+    "name": "Filemon",
+    "abbr": "Flm",
+    "testament": "PB",
+    "category": "Surat Paulus",
+    "chaptersCount": 1
+  },
+  {
+    "id": 58,
+    "name": "Ibrani",
+    "abbr": "Ibr",
+    "testament": "PB",
+    "category": "Surat Umum",
+    "chaptersCount": 13
+  },
+  {
+    "id": 59,
+    "name": "Yakobus",
+    "abbr": "Yak",
+    "testament": "PB",
+    "category": "Surat Umum",
+    "chaptersCount": 5
+  },
+  {
+    "id": 60,
+    "name": "1 Petrus",
+    "abbr": "1Ptr",
+    "testament": "PB",
+    "category": "Surat Umum",
+    "chaptersCount": 5
+  },
+  {
+    "id": 61,
+    "name": "2 Petrus",
+    "abbr": "2Ptr",
+    "testament": "PB",
+    "category": "Surat Umum",
+    "chaptersCount": 3
+  },
+  {
+    "id": 62,
+    "name": "1 Yohanes",
+    "abbr": "1Yoh",
+    "testament": "PB",
+    "category": "Surat Umum",
+    "chaptersCount": 5
+  },
+  {
+    "id": 63,
+    "name": "2 Yohanes",
+    "abbr": "2Yoh",
+    "testament": "PB",
+    "category": "Surat Umum",
+    "chaptersCount": 1
+  },
+  {
+    "id": 64,
+    "name": "3 Yohanes",
+    "abbr": "3Yoh",
+    "testament": "PB",
+    "category": "Surat Umum",
+    "chaptersCount": 1
+  },
+  {
+    "id": 65,
+    "name": "Yudas",
+    "abbr": "Yud",
+    "testament": "PB",
+    "category": "Surat Umum",
+    "chaptersCount": 1
+  },
+  {
+    "id": 66,
+    "name": "Wahyu",
+    "abbr": "Why",
+    "testament": "PB",
+    "category": "Nubuat",
+    "chaptersCount": 22
+  }
+]

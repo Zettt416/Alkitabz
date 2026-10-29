@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Alkitabz App Logo</title>
+  <defs>
+    <!-- Background Gradient (Midnight Sapphire Obsidian) -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111B30" />
+      <stop offset="45%" stop-color="#0B101D" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Center Warm Radial Glow -->
+    <radialGradient id="aura" cx="50%" cy="45%" r="52%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25" />
+      <stop offset="45%" stop-color="#D97706" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#0B101D" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Metallic Gold Gradient -->
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="22%" stop-color="#FDE68A" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="82%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#92400E" />
+    </linearGradient>
+
+    <!-- Rich Cover Dark Gold -->
+    <linearGradient id="coverGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#B45309" />
+      <stop offset="100%" stop-color="#5B2405" />
+    </linearGradient>
+
+    <!-- Crisp Page Gradients -->
+    <linearGradient id="pageL" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F1F5F9" />
+      <stop offset="75%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+
+    <linearGradient id="pageR" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#CBD5E1" />
+      <stop offset="25%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+
+    <!-- Shadows -->
+    <filter id="shadowBook" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.75" />
+    </filter>
+
+    <filter id="shadowZ" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#020617" flood-opacity="0.48" />
+    </filter>
+
+    <filter id="starGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#FDE68A" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <!-- Circular Outer Disc (Diameter 464px, safe for Android circle, squircle & rounded-square launchers) -->
+  <circle cx="256" cy="256" r="232" fill="url(#bg)" />
+  <circle cx="256" cy="256" r="232" fill="url(#aura)" />
+
+  <!-- Outer Ring with Subtle Metallic Gold Sheen -->
+  <circle cx="256" cy="256" r="230" fill="none" stroke="url(#gold)" stroke-width="2.5" stroke-opacity="0.8" />
+
+  <!-- Star of Bethlehem / Divine Light at Top -->
+  <g transform="translate(256, 114)" filter="url(#starGlow)">
+    <path d="M 0,-34 Q 4,-8 30,0 Q 4,8 0,34 Q -4,8 -30,0 Q -4,-8 0,-34 Z" fill="url(#gold)" />
+    <circle cx="0" cy="0" r="5.5" fill="#FFFFFF" />
+  </g>
+
+  <!-- Open Holy Bible Composite -->
+  <g filter="url(#shadowBook)">
+    <!-- Leather / Gold Hard Cover Spine Base -->
+    <path d="
+      M 92,340 
+      C 162,372 230,366 256,382 
+      C 282,366 350,372 420,340 
+      L 420,324 
+      C 350,356 282,350 256,366 
+      C 230,350 162,356 92,324 
+      Z" 
+      fill="url(#coverGold)" />
+
+    <!-- Gold Gilded Page Edge Rim (Book depth) -->
+    <path d="
+      M 96,326 
+      C 164,356 230,350 256,366 
+      C 282,350 348,356 416,326 
+      L 416,314 
+      C 348,344 282,338 256,354 
+      C 230,338 164,344 96,314 
+      Z" 
+      fill="url(#gold)" opacity="0.9" />
+
+    <!-- Left Open Page -->
+    <path d="
+      M 256,354 
+      C 228,336 162,338 100,312 
+      C 94,309 92,302 92,295 
+      L 104,180 
+      C 105,173 112,168 119,171 
+      C 176,194 228,192 256,208 
+      Z" 
+      fill="url(#pageL)" />
+
+    <!-- Right Open Page -->
+    <path d="
+      M 256,354 
+      C 284,336 350,338 412,312 
+      C 418,309 420,302 420,295 
+      L 408,180 
+      C 407,173 400,168 393,171 
+      C 336,194 284,192 256,208 
+      Z" 
+      fill="url(#pageR)" />
+
+    <!-- Spine Crease Shadow -->
+    <path d="M 253,208 L 259,208 L 259,355 L 253,355 Z" fill="#64748B" opacity="0.32" />
+
+    <!-- Left Page: Gold Foil Latin Cross Motif (Solid, clean geometry) -->
+    <g transform="translate(158, 250)">
+      <rect x="-4" y="-26" width="8" height="52" rx="4" fill="url(#gold)" opacity="0.6" />
+      <rect x="-17" y="-12" width="34" height="8" rx="4" fill="url(#gold)" opacity="0.6" />
+    </g>
+
+    <!-- Right Page: Scripture Verse Lines (Clean, modern, balanced) -->
+    <g fill="#94A3B8" opacity="0.4">
+      <rect x="312" y="222" width="62" height="5" rx="2.5" />
+      <rect x="312" y="238" width="72" height="5" rx="2.5" />
+      <rect x="312" y="254" width="66" height="5" rx="2.5" />
+      <rect x="312" y="270" width="52" height="5" rx="2.5" />
+    </g>
+
+    <!-- Hanging Bookmark Ribbon beneath the book (Centred on spine) -->
+    <g filter="url(#shadowZ)">
+      <path d="
+        M 238,358 
+        L 274,358 
+        L 274,410 
+        L 256,394 
+        L 238,410 
+        Z" 
+        fill="url(#gold)" />
+      <!-- Fishtail crease shadow -->
+      <path d="M 256,358 L 274,358 L 274,410 L 256,394 Z" fill="url(#coverGold)" opacity="0.35" />
+    </g>
+
+    <!-- THE ICONIC 'Z' EMBLEM -->
+    <g filter="url(#shadowZ)">
+      <path d="
+        M 200,204 
+        L 322,204 
+        C 330,204 335,210 331,217 
+        L 218,330 
+        L 322,330 
+        C 328,330 334,335 334,341 
+        L 334,347 
+        C 334,353 328,358 322,358 
+        L 190,358 
+        C 182,358 177,352 181,345 
+        L 294,232 
+        L 200,232 
+        C 194,232 188,227 188,221 
+        L 188,215 
+        C 188,209 194,204 200,204 
+        Z" 
+        fill="url(#gold)" />
+    </g>
+  </g>
+</svg>

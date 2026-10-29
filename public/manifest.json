@@ -1,0 +1,19 @@
+{
+  "name": "Alkitab Digital Indonesia",
+  "short_name": "Alkitab",
+  "description": "Aplikasi Alkitab bahasa Indonesia lengkap 66 Kitab, bebas iklan, responsif, dan 100% offline-first.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF7EE",
+  "theme_color": "#B45309",
+  "orientation": "portrait-primary",
+  "categories": ["books", "lifestyle", "education"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
